@@ -98,11 +98,14 @@ header{
 }
 aside{
     height: 100%;
-    width: 280px;
+    width: 65px;
     background-color: white;
     overflow-y:auto;
     scrollbar-color:transparent transparent;
     scrollbar-width: thin;
+}
+aside:hover{
+    width: 265px;
 }
 nav{
     width: 100%;
@@ -122,7 +125,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.05)
 }
 .nav-link span{
-    margin-left: 24px;
+    margin-left: 29px;
     font-size: 1.4rem;
     line-height: 2em;
     font-weight: 400;
@@ -212,4 +215,56 @@ main{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+/* responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+    }
+    .mid-section form {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .video {
+        width: 48%;
+    }
+}
+
+@media (max-width: 1024px) {
+    aside {
+        width: 200px;
+    }
+    .video {
+        width: 260px;
+    }
+}
+
+@media (max-width: 1024px) {
+    aside {
+        width: 200px;
+    }
+    .video {
+        width: 260px;
+    }
+}
+@media (max-width: 480px) {
+    .mid-section form {
+        flex-direction: column;
+    }
+    .video {
+        width: 100%;
+    }
+    .video-title {
+        font-size: 1.4rem;
+    }
+    .creator-image img {
+        height: 30px;
+        width: 30px;
+    }
 }
